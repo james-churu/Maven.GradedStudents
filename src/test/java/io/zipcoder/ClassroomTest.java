@@ -17,7 +17,6 @@ public class ClassroomTest {
 
 
 
-
     Student student1 = new Student("Jimmy", "Churu", stu1Scores);
     Student student2 = new Student("John", "Churu", stu2Scores);
     Student student3 = new Student("Jeremy", "Churu", stu3Scores);
@@ -128,16 +127,11 @@ public class ClassroomTest {
     @Test
     public void getStudentByScoreTest(){
 
-        Student[] ExpectedSorted = {student2,student1,student3};
-
         Student[] unSorted = class1.students;
-        Classroom sorted = class1;
+        Student[] ExpectedSorted = {student2,student1,student3};
+        Student[] ActualSorted = class1.getStudentByScore();
 
-
-
-        for(int x = 0; x <= sorted.students.length; x++){
-            System.out.println();
-        }
+        Assert.assertEquals(ExpectedSorted , ActualSorted);
     }
     @Test
     public void getGradeBookTest(){
