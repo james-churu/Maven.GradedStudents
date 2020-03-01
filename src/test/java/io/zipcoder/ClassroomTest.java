@@ -154,34 +154,37 @@ public class ClassroomTest {
         Student[] studentArr = {student1,student2,student3,student4,student5};    // Student Array
         Classroom class5 = new Classroom(studentArr);
 
-        LinkedHashMap <Character , ArrayList<Student>> Expected;
-        Expected = new LinkedHashMap <Character, ArrayList<Student>>();
+        LinkedHashMap <Character , ArrayList<Student>> Expected = new LinkedHashMap <>();
 
         //Adding A
-        ArrayList<Student> Alist = new ArrayList<Student>();
+        ArrayList<Student> Alist = new ArrayList<>();
         Alist.add(student5);
         Expected.put('A',Alist);
+
         //Adding B
-        ArrayList<Student> Blist = new ArrayList<Student>();
-        Alist.add(student2);
+        ArrayList<Student> Blist = new ArrayList<>();
+        Blist.add(student2);
         Expected.put('B',Blist);
+
         //Adding C
-        ArrayList<Student> Clist = new ArrayList<Student>();
-        Alist.add(student3);
+        ArrayList<Student> Clist = new ArrayList<>();
+        Clist.add(student3);
         Expected.put('C',Clist);
+
         //Adding D
         ArrayList<Student> Dlist = new ArrayList<Student>();
-        Alist.add(student1);
+        Dlist.add(student1);
         Expected.put('D',Dlist);
+
         //Adding F
         ArrayList<Student> Flist = new ArrayList<Student>();
-        Alist.add(student4);
+        Flist.add(student4);
         Expected.put('F',Flist);
 
         LinkedHashMap<Character,ArrayList<Student>> Actual = class5.getGradeBook();
 
 
-        Assert.assertEquals(Expected.get('A') , Actual.get('A'));
+        Assert.assertEquals(Expected, Actual);
     }
 
 }

@@ -81,7 +81,7 @@ public class Classroom {
 
         for(int x = 0; x <= students.length -1; x++){
 
-            if(students[x].getAverageExamScore() / students.length >= 90){
+            if(students[x].getAverageExamScore() > 89){
 
                 if(gradeBook.containsKey('A')){
                     gradeBook.get('A').add(students[x]);
@@ -91,7 +91,7 @@ public class Classroom {
                     gradeBook.put('A',Alist);
                 }
 
-            }else if(students[x].getAverageExamScore() >= 71 && students[x].getAverageExamScore() <= 89){
+            }else if(students[x].getAverageExamScore() > 71 && students[x].getAverageExamScore() < 90){
 
                 if(gradeBook.containsKey('B')){
                     gradeBook.get('B').add(students[x]);
@@ -101,7 +101,7 @@ public class Classroom {
                     gradeBook.put('B',Blist);
                 }
 
-            }else if(students[x].getAverageExamScore() >= 50 && students[x].getAverageExamScore() <= 70){
+            }else if(students[x].getAverageExamScore() > 50 && students[x].getAverageExamScore() < 70){
 
                 if(gradeBook.containsKey('C')){
                     gradeBook.get('C').add(students[x]);
@@ -111,7 +111,7 @@ public class Classroom {
                     gradeBook.put('C',Clist);
                 }
 
-            }else if(students[x].getAverageExamScore() >= 11 && students[x].getAverageExamScore() <= 49){
+            }else if(students[x].getAverageExamScore() > 11 && students[x].getAverageExamScore() < 49){
 
                 if(gradeBook.containsKey('D')){
                     gradeBook.get('D').add(students[x]);
